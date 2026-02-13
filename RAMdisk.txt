@@ -1,0 +1,12 @@
+These commands create a RAM disk on a Linux system:
+
+1: Create a directory that will serve as the mount point for the RAM disk.
+• sudo mkdir -p /mnt/ramdisk
+
+2: Open the system’s filesystem table for editing.
+• sudo nano /etc/fstab
+
+3: Add the line (configures a temporary filesystem (tmpfs) mounted at /mnt/ramdisk)
+• tmpfs   /mnt/ramdisk   tmpfs   size=1M,mode=1777   0   0
+
+It allocates 1 MB of RAM for storage and sets permissions so all users can read, write, and execute within it.
